@@ -8,7 +8,7 @@ export default function Footer() {
       
       <div className={styles.socials}>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <Image src="/resources/facebook.png" alt="Facebook" width={28} height={28} />
+          <Image src="/resources/facebook.png" alt="Facebook" width={32} height={32} />
         </a>
 
         <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
