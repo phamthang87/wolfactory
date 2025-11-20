@@ -13,9 +13,9 @@ export default function HeroSection() {
         </p>
 
         {/* CTA SCROLL TO GAMES */}
-        <a href="#games" className={styles.ctaButton}>
-          Explore Our Games
-        </a>
+        <a href="#games" className={styles.neonButton}>
+  Explore Our Games
+</a>
       </div>
     </section>
   );
