@@ -5,29 +5,18 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className="container foot-grid">
-        <div className="brand-col">
-          <div className={styles.brand}>
-            <Image src="/logo.png" alt="Wolfactory" width={40} height={40} />
-            <span>WOLFACTORY</span>
-          </div>
-          <p>Chúng tôi tạo ra trải nghiệm game mobile tỉ mỉ và đầy cảm xúc.</p>
-        </div>
+      
+      <div className={styles.socials}>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <Image src="/resources/facebook.png" alt="Facebook" width={28} height={28} />
+        </a>
 
-        <div className={styles.links}>
-          <a href="/about">About</a>
-          <a href="/games">Games</a>
-          <a href="/careers">Careers</a>
-          <a href="/contact">Contact</a>
-        </div>
-
-        <div className={styles.contact}>
-          <strong>Contact</strong>
-          <p>contact@wolfactory.com</p>
-          <p>+84 123 456 789</p>
-        </div>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <Image src="/resources/youtube.png" alt="YouTube" width={32} height={32} />
+        </a>
       </div>
-      <div className={styles.copyright}>© {new Date().getFullYear()} Wolfactory — All Rights Reserved</div>
+
+      <p>© 2025 Wolfactory — All Rights Reserved</p>
     </footer>
   );
 }
