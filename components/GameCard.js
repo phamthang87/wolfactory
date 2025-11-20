@@ -1,18 +1,16 @@
-// components/GameCard.js
+import Link from "next/link";
 import styles from "../styles/GameCard.module.css";
-import Image from "next/image";
 
-export default function GameCard({ img = "/resources/game1.png", title = "Untitled", desc = "" }) {
+export default function GameCard({ id, img, title, desc }) {
   return (
-    <article className={styles.card}>
-      <div className={styles.media}>
-        <Image src={img} alt={title} layout="fill" objectFit="cover" />
+    <Link href={`/games/${id}`} className={styles.cardLink}>
+      <div className={styles.card}>
+        <img src={img} alt={title} className={styles.image} />
+        <div className={styles.info}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.desc}>{desc}</p>
+        </div>
       </div>
-      <div className={styles.body}>
-        <h3>{title}</h3>
-        <p>{desc}</p>
-        <button className={styles.cta}>View Game</button>
-      </div>
-    </article>
+    </Link>
   );
 }
