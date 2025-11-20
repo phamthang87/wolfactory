@@ -26,25 +26,36 @@
   margin-bottom: 40px;
 }
 
-/* CTA BUTTON */
-.ctaButton {
-  display: inline-block;
-  padding: 16px 36px;
-  background: linear-gradient(90deg, #d3542c, #b84220);
-  color: #ffffff;
-  font-weight: 600;
+/* 🔥 CTA NEON BUTTON */
+.neonButton {
   font-size: 18px;
+  font-weight: 600;
+  padding: 15px 40px;
   border-radius: 12px;
-  margin-top: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+
+  background: linear-gradient(145deg, #ff825a, #d44e2a);
+
+  box-shadow:
+    0 0 12px rgba(255, 120, 80, 0.6),
+    0 0 22px rgba(255, 120, 80, 0.4);
+
   transition: 0.25s ease-in-out;
-  border: 2px solid rgba(255,255,255,0.15);
 }
 
-.ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.55);
-  background: linear-gradient(90deg, #e85d30, #cc4820);
+.neonButton:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 0 18px rgba(255, 120, 80, 0.8),
+    0 0 30px rgba(255, 120, 80, 0.6),
+    0 0 55px rgba(255, 120, 80, 0.5);
 }
+
+.neonButton:active {
+  transform: scale(0.97);
+}
+
 
 
