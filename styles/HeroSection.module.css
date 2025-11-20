@@ -5,7 +5,7 @@
   min-height: 75vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ép căn trái theo container */
+  justify-content: flex-start;
   padding: 0;
   color: white;
 
@@ -17,7 +17,25 @@
   background-repeat: no-repeat;
 }
 
-/* Fade liền mạch xuống section dưới */
+/* Dark gradient trái cho text nổi */
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Fade xuống dưới liền mạch */
 .hero::after {
   content: "";
   position: absolute;
@@ -27,24 +45,25 @@
     rgba(0,0,0,0) 40%,
     #0d0d0d 100%
   );
+  z-index: 0;
   pointer-events: none;
 }
 
-/* ALIGN PERFECT với chữ "Our Games" */
+/* ALIGN PERFECT + BACKDROP BLUR */
 .content {
   position: relative;
   max-width: 600px;
-
-  /* MATCH padding container global (40px) */
   padding-left: 40px;
   padding-right: 40px;
-
   margin: 0;
-  z-index: 2;
   text-align: left;
+  z-index: 2;
+
+  /* ⭐ LÀM TEXT SIÊU DỄ ĐỌC */
+  backdrop-filter: blur(4px);
 }
 
-/* Text styles */
+/* Text */
 .title {
   font-size: 3.2rem;
   font-weight: 700;
@@ -54,12 +73,12 @@
 
 .subtitle {
   font-size: 1.2rem;
-  opacity: 0.75;
+  opacity: 0.85;       /* tăng độ sáng chữ vì có blur */
   line-height: 1.6;
   margin-bottom: 35px;
 }
 
-/* CTA – vàng đồng giống favicon */
+/* CTA vàng đồng */
 .cta {
   display: inline-block;
   padding: 12px 28px;
