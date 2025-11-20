@@ -26,30 +26,25 @@
   margin-bottom: 40px;
 }
 
-/* Modern CTA button */
+/* CTA BUTTON */
 .ctaButton {
-  background: linear-gradient(135deg, #ff7a45 0%, #ff5e3a 40%, #ff784f 100%);
-  /* cam đậm pha đỏ – hợp hero xanh tím */
+  display: inline-block;
+  padding: 16px 36px;
+  background: linear-gradient(90deg, #d3542c, #b84220);
   color: #ffffff;
-  padding: 15px 42px;
-  border-radius: 10px;
-  font-size: 17px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 6px 18px rgba(255, 120, 70, 0.35);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 12px;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: 0.25s ease-in-out;
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
 .ctaButton:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(255, 120, 70, 0.55);
-  filter: brightness(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.55);
+  background: linear-gradient(90deg, #e85d30, #cc4820);
 }
 
-.ctaButton:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(255, 120, 70, 0.3);
-}
 
