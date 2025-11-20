@@ -9,10 +9,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
+  // MENU MỚI — CHỈ 3 MỤC
   const links = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/careers", label: "Careers" },
     { href: "/games", label: "Games" },
     { href: "/contact", label: "Contact" },
   ];
@@ -30,7 +29,10 @@ export default function Navbar() {
         <div className={`${styles.links} ${open ? styles.open : ""}`}>
           {links.map((l) => (
             <Link key={l.href} href={l.href}>
-              <a className={router.pathname === l.href ? styles.active : ""} onClick={() => setOpen(false)}>
+              <a
+                className={router.pathname === l.href ? styles.active : ""}
+                onClick={() => setOpen(false)}
+              >
                 {l.label}
               </a>
             </Link>
