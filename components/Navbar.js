@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className={styles.container}>
         <Link href="/">
           <a className={styles.brand}>
-            <Image src="/logo.png" alt="Wolfactory" width={36} height={36} />
+            <Image src="/resources/logo.png" alt="Wolfactory" width={36} height={36} />
             <span>WOLFACTORY</span>
           </a>
         </Link>
