@@ -3,7 +3,7 @@ import styles from "../styles/GameCard.module.css";
 
 export default function GameCard({ id, img, title, desc }) {
   return (
-    <Link href={`/games/${id}`} className={styles.cardLink}>
+    <Link href={`/games/${id}`}>
       <div className={styles.card}>
         <img src={img} alt={title} className={styles.image} />
         <div className={styles.info}>
