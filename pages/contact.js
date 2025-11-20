@@ -1,16 +1,14 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// pages/contact.js
+import Layout from "../components/Layout";
 
 export default function Contact() {
   return (
-    <>
-      <Navbar />
-      <main style={{padding:'50px'}}>
-        <h1>Contact Us</h1>
-        <p>Email: contact@wolfactory.com</p>
-        <p>Phone: +84 123 456 789</p>
-      </main>
-      <Footer />
-    </>
+    <Layout title="Contact">
+      <section className="container" style={{ padding: "60px 20px" }}>
+        <h1 className="section_title">Contact</h1>
+        <p className="section_desc">Email: contact@wolfactory.com</p>
+        <p className="section_desc">Phone: +84 123 456 789</p>
+      </section>
+    </Layout>
   );
 }
