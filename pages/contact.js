@@ -1,14 +1,26 @@
 // pages/contact.js
-import Layout from "../components/Layout";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
-    <Layout title="Contact">
-      <section className="container" style={{ padding: "60px 20px" }}>
-        <h1 className="section_title">Contact</h1>
-        <p className="section_desc">Email: contact@wolfactory.com</p>
-        <p className="section_desc">Phone: +84 123 456 789</p>
-      </section>
-    </Layout>
+    <>
+      <Navbar />
+
+      <main style={{ padding: "60px 20px", maxWidth: "900px", margin: "auto" }}>
+        <h1>Contact Us</h1>
+
+        <p style={{ color: "#ccc", marginBottom: "25px" }}>
+          Wolfactory is a passionate mobile game studio from Vietnam.  
+          We focus on tight gameplay, beautiful visuals, and evergreen mechanics  
+          that delight players.
+        </p>
+
+        <p>Email: contact@wolfactory.com</p>
+        <p>Phone: +84 123 456 789</p>
+      </main>
+
+      <Footer />
+    </>
   );
 }
