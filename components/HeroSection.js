@@ -12,7 +12,6 @@ export default function HeroSection() {
         </p>
         <div className={styles.controls}>
           <a className={styles.primary} href="#games">Explore Our Games</a>
-          <a className={styles.secondary} href="/about">About Us</a>
         </div>
       </div>
     </section>
