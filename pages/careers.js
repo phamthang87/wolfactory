@@ -1,15 +1,13 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// pages/careers.js
+import Layout from "../components/Layout";
 
 export default function Careers() {
   return (
-    <>
-      <Navbar />
-      <main style={{padding:'50px', maxWidth:'900px', margin:'auto'}}>
-        <h1>Careers at Wolfactory</h1>
-        <p>Chúng tôi luôn tìm kiếm nhân tài sáng tạo, đam mê game development. Tham gia cùng chúng tôi để tạo ra những trải nghiệm mobile game tuyệt vời cho người chơi.</p>
-      </main>
-      <Footer />
-    </>
+    <Layout title="Careers">
+      <section className="container" style={{ padding: "60px 20px" }}>
+        <h1 className="section_title">Careers</h1>
+        <p className="section_desc">We are always looking for talented artists, devs and designers. Send your CV to contact@wolfactory.com</p>
+      </section>
+    </Layout>
   );
 }

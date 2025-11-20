@@ -1,41 +1,51 @@
-import { useState } from 'react';
+// components/Navbar.js
+import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
-  // State quản lý việc đóng mở menu mobile
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
 
-  // Hàm đảo ngược trạng thái: Đang đóng thành mở và ngược lại
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/careers", label: "Careers" },
+    { href: "/games", label: "Games" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navContainer}>
-        {/* Logo */}
-        <div className={styles.logo}>
-           {/* Lưu ý: Đảm bảo file ảnh có trong public/resources/ */}
-           <Link href="/">
-             <img src="/resources/logo.png" alt="Wolfactory" />
-           </Link>
+      <div className={styles.container}>
+        <Link href="/">
+          <a className={styles.brand}>
+            <Image src="/logo.png" alt="Wolfactory" width={36} height={36} />
+            <span>WOLFACTORY</span>
+          </a>
+        </Link>
+
+        <div className={`${styles.links} ${open ? styles.open : ""}`}>
+          {links.map((l) => (
+            <Link key={l.href} href={l.href}>
+              <a className={router.pathname === l.href ? styles.active : ""} onClick={() => setOpen(false)}>
+                {l.label}
+              </a>
+            </Link>
+          ))}
         </div>
 
-        {/* Nút 3 gạch (Chỉ hiện trên mobile) */}
-        <div className={styles.hamburger} onClick={toggleMenu}>
-          <span className={isOpen ? styles.barOpen : ''}></span>
-          <span className={isOpen ? styles.barOpen : ''}></span>
-          <span className={isOpen ? styles.barOpen : ''}></span>
-        </div>
-
-        {/* Danh sách Link - Sẽ thêm class active khi isOpen = true */}
-        <div className={`${styles.navLinks} ${isOpen ? styles.active : ''}`}>
-          <Link href="/" onClick={() => setIsOpen(false)}>HOME</Link>
-          <Link href="#about" onClick={() => setIsOpen(false)}>ABOUT</Link>
-          <Link href="#games" onClick={() => setIsOpen(false)}>GAMES</Link>
-          <Link href="#careers" onClick={() => setIsOpen(false)}>CAREERS</Link>
-        </div>
+        <button
+          aria-label="Toggle menu"
+          className={`${styles.burger} ${open ? styles.burgerOpen : ""}`}
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </nav>
   );
