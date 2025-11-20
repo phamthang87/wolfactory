@@ -28,18 +28,28 @@
 
 /* Modern CTA button */
 .ctaButton {
-  background: linear-gradient(90deg, #ff7a45, #ff5722);
-  color: white !important;
-  padding: 16px 42px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7a45 0%, #ff5e3a 40%, #ff784f 100%);
+  /* cam đậm pha đỏ – hợp hero xanh tím */
+  color: #ffffff;
+  padding: 15px 42px;
+  border-radius: 10px;
   font-size: 17px;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: 0.25s ease;
+  letter-spacing: 0.5px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 18px rgba(255, 120, 70, 0.35);
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 90, 40, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 120, 70, 0.55);
+  filter: brightness(1.05);
 }
+
+.ctaButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(255, 120, 70, 0.3);
+}
+
