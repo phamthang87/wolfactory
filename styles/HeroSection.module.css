@@ -6,11 +6,8 @@
   display: flex;
   align-items: center;
   color: white;
-
-  /* IMPORTANT FIX — bỏ padding để container canh lề chính xác */
   padding: 0;
 
-  /* Background */
   background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)),
     url('/resources/hero.jpg');
@@ -37,13 +34,8 @@
 .content {
   position: relative;
   max-width: 600px;
-
-  /* canh giữa giống GamesSection */
   margin: 0 auto;
-
-  /* nhẹ để tránh sát lề mobile */
   padding: 0 20px;
-
   z-index: 2;
   text-align: left;
 }
@@ -65,4 +57,14 @@
 .cta {
   display: inline-block;
   padding: 12px 28px;
-  background:
+  background: white;
+  color: black;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: #e5e5e5;
+}
