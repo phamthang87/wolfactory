@@ -1,0 +1,67 @@
+.hero {
+  /* Gradient đen đè lên ảnh để làm nổi chữ */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), #0a0a0a), url('/resources/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh; /* Chiều cao bằng 85% màn hình */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.ctaButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #b91c1c; /* Màu đỏ đậm hơn khi hover */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    text-align: center; /* Mobile thì căn giữa cho đẹp */
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

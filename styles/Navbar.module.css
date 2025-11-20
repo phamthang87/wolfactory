@@ -1,0 +1,93 @@
+.navbar {
+  background-color: #0a0a0a;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.navLinks a {
+  margin-left: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.navLinks a:hover {
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none; /* Ẩn trên máy tính */
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Hiện nút 3 gạch trên mobile */
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hiệu ứng biến nút 3 gạch thành dấu X khi mở */
+  .hamburger span.barOpen:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger span.barOpen:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger span.barOpen:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navLinks {
+    position: fixed;
+    left: -100%; /* Giấu menu sang bên trái */
+    top: 80px;
+    background-color: #0a0a0a;
+    width: 100%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.3s;
+  }
+
+  .navLinks.active {
+    left: 0; /* Kéo menu ra giữa màn hình */
+  }
+
+  .navLinks a {
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
