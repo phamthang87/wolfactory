@@ -1,3 +1,4 @@
+// components/HeroSection.js
 import styles from "../styles/HeroSection.module.css";
 
 export default function HeroSection() {
@@ -7,11 +8,14 @@ export default function HeroSection() {
         <h1 className={styles.title}>Wolfactory Studio</h1>
 
         <p className={styles.subtitle}>
-          We craft immersive mobile experiences — beautiful visuals, tight gameplay
+          We craft immersive mobile experiences — beautiful visuals, tight gameplay  
           and global ambitions.
         </p>
 
-        <button className={styles.ctaButton}>Explore Our Games</button>
+        {/* CTA SCROLL TO GAMES */}
+        <a href="#games" className={styles.ctaButton}>
+          Explore Our Games
+        </a>
       </div>
     </section>
   );
