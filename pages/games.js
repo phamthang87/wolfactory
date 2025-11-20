@@ -1,3 +1,4 @@
+// Trigger Vercel build - safe change
 import GamesSection from "../components/GamesSection";
 
 export default function GamesPage() {
@@ -7,4 +8,3 @@ export default function GamesPage() {
     </div>
   );
 }
-dùng làm gì
