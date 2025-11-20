@@ -1,4 +1,3 @@
-// Trigger Vercel build - no effect
 import HeroSection from "../components/HeroSection";
 import GamesSection from "../components/GamesSection";
 
