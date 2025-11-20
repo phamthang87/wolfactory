@@ -1,24 +1,23 @@
 /* HeroSection.module.css */
 
-/* HERO BACKGROUND + CENTER VERTICAL */
 .hero {
   position: relative;
   min-height: 75vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* canh nội dung giống container */
+  justify-content: flex-start; /* ép căn trái theo container */
   padding: 0;
   color: white;
 
   background-image:
-    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65)),
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)),
     url('/resources/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* CINEMATIC + FADE MATCH SECTION BELOW */
+/* Fade liền mạch xuống section dưới */
 .hero::after {
   content: "";
   position: absolute;
@@ -26,23 +25,26 @@
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0) 40%,
-    rgba(13,13,13,1) 100%
+    #0d0d0d 100%
   );
   pointer-events: none;
 }
 
-/* CONTENT ALIGNMENT FIX — THẲNG 100% VỚI OUR GAMES */
+/* ALIGN PERFECT với chữ "Our Games" */
 .content {
   position: relative;
   max-width: 600px;
-  margin: 0;              /* bỏ auto center */
-  padding-left: 32px;     /* match EXACT container padding */
-  padding-right: 32px;    /* giống container */
+
+  /* MATCH padding container global (40px) */
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin: 0;
   z-index: 2;
   text-align: left;
 }
 
-/* TYPO */
+/* Text styles */
 .title {
   font-size: 3.2rem;
   font-weight: 700;
@@ -52,25 +54,26 @@
 
 .subtitle {
   font-size: 1.2rem;
-  opacity: 0.78;
+  opacity: 0.75;
   line-height: 1.6;
   margin-bottom: 35px;
 }
 
-/* CTA — ĐỒNG MÀU VỚI FAVICON (VÀNG ĐỒNG) */
+/* CTA – vàng đồng giống favicon */
 .cta {
   display: inline-block;
   padding: 12px 28px;
-  background: #d4a031; /* vàng đồng */
-  color: black;
+  background: #d4a031;
+  color: #1a1a1a;
   font-weight: 600;
   border-radius: 6px;
-  transition: background 0.25s ease, transform 0.15s ease;
   text-decoration: none;
-  box-shadow: 0 0 12px rgba(212,160,49,0.45);
+  box-shadow: 0 0 14px rgba(212,160,49,0.5);
+  transition: 0.25s ease;
 }
 
 .cta:hover {
-  background: #f0c766;
+  background: #e8be5a;
+  box-shadow: 0 0 18px rgba(212,160,49,0.7);
   transform: translateY(-2px);
 }
