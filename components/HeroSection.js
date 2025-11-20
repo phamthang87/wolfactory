@@ -1,15 +1,19 @@
+// components/HeroSection.js
 import styles from "../styles/HeroSection.module.css";
 
 export default function HeroSection() {
   return (
     <section className={styles.hero}>
-      <div className={styles.content}>
-        <h1>WELCOME<br />TO WOLFACTORY</h1>
-        <p>
-          Chuyên sản xuất và phát hành mobile game chất lượng cao.<br/>
-          Đưa trí tuệ Việt Nam vươn tầm thế giới.
+      <div className={styles.overlay} />
+      <div className={styles.container}>
+        <h1 className={styles.title}>Wolfactory<br/>Mobile Game Studio</h1>
+        <p className={styles.lead}>
+          We craft immersive mobile experiences — beautiful visuals, tight gameplay and global ambitions.
         </p>
-        <button className={styles.ctaButton}>EXPLORE OUR GAMES</button>
+        <div className={styles.controls}>
+          <a className={styles.primary} href="#games">Explore Our Games</a>
+          <a className={styles.secondary} href="/about">About Us</a>
+        </div>
       </div>
     </section>
   );
