@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.overlay} />
       <div className={styles.container}>
-        <h1 className={styles.title}>Wolfactory<br/>Mobile Game Studio</h1>
+        <h1 className={styles.title}>Wolfactory<br/>Studio</h1>
         <p className={styles.lead}>
           We craft immersive mobile experiences — beautiful visuals, tight gameplay and global ambitions.
         </p>
