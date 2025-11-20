@@ -1,13 +1,10 @@
 // pages/games.js
-import Layout from "../components/Layout";
 import GamesSection from "../components/GamesSection";
 
-export default function Games() {
+export default function GamesPage() {
   return (
-    <Layout title="Games">
-      <section style={{ paddingTop: 20 }}>
-        <GamesSection />
-      </section>
-    </Layout>
+    <div style={{ paddingTop: "80px" }}>
+      <GamesSection />
+    </div>
   );
 }
