@@ -1,61 +1,53 @@
+/* HeroSection.module.css */
+
 .hero {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), #0a0a0a),
-    url("/resources/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
+  position: relative;
+  min-height: 70vh;
   display: flex;
   align-items: center;
+  padding: 0 20px;
+  color: white;
+  background: url('/hero-bg.jpg') center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
 }
 
 .content {
-  max-width: 900px;
-  padding: 0 40px;
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
 }
 
-.content h1 {
-  font-size: 64px;
-  font-weight: 800;
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
   margin-bottom: 20px;
-  text-transform: none;
 }
 
-.content p {
-  font-size: 20px;
-  color: #ddd;
-  margin-bottom: 40px;
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.75;
+  line-height: 1.6;
+  margin-bottom: 35px;
 }
 
-/* 🔥 CTA NEON BUTTON */
-.neonButton {
-  font-size: 18px;
+.cta {
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  color: black;
   font-weight: 600;
-  padding: 15px 40px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-
-  background: linear-gradient(145deg, #ff825a, #d44e2a);
-
-  box-shadow:
-    0 0 12px rgba(255, 120, 80, 0.6),
-    0 0 22px rgba(255, 120, 80, 0.4);
-
-  transition: 0.25s ease-in-out;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+  text-decoration: none;
 }
 
-.neonButton:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow:
-    0 0 18px rgba(255, 120, 80, 0.8),
-    0 0 30px rgba(255, 120, 80, 0.6),
-    0 0 55px rgba(255, 120, 80, 0.5);
+.cta:hover {
+  background: #e5e5e5;
 }
-
-.neonButton:active {
-  transform: scale(0.97);
-}
-
-
-
