@@ -4,8 +4,6 @@ import styles from "../styles/HeroSection.module.css";
 export default function HeroSection() {
   return (
     <section className={styles.hero}>
-      
-      {/* FIX nhỏ: container để canh lề giống GamesSection */}
       <div className="container">
         <div className={styles.content}>
           <h1 className={styles.title}>Wolfactory Studio</h1>
@@ -19,7 +17,6 @@ export default function HeroSection() {
           </a>
         </div>
       </div>
-
     </section>
   );
 }
