@@ -1,45 +1,48 @@
 /* HeroSection.module.css */
 
+/* HERO BACKGROUND + CENTER VERTICAL */
 .hero {
   position: relative;
   min-height: 75vh;
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: flex-start; /* canh nội dung giống container */
   padding: 0;
+  color: white;
 
   background-image:
-    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)),
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65)),
     url('/resources/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Cinematic fade */
+/* CINEMATIC + FADE MATCH SECTION BELOW */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0) 30%,
-    rgba(0,0,0,0.9) 100%
+    rgba(0,0,0,0) 40%,
+    rgba(13,13,13,1) 100%
   );
-
   pointer-events: none;
 }
 
+/* CONTENT ALIGNMENT FIX — THẲNG 100% VỚI OUR GAMES */
 .content {
   position: relative;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;              /* bỏ auto center */
+  padding-left: 32px;     /* match EXACT container padding */
+  padding-right: 32px;    /* giống container */
   z-index: 2;
   text-align: left;
 }
 
+/* TYPO */
 .title {
   font-size: 3.2rem;
   font-weight: 700;
@@ -49,22 +52,25 @@
 
 .subtitle {
   font-size: 1.2rem;
-  opacity: 0.75;
+  opacity: 0.78;
   line-height: 1.6;
   margin-bottom: 35px;
 }
 
+/* CTA — ĐỒNG MÀU VỚI FAVICON (VÀNG ĐỒNG) */
 .cta {
   display: inline-block;
   padding: 12px 28px;
-  background: white;
+  background: #d4a031; /* vàng đồng */
   color: black;
   font-weight: 600;
   border-radius: 6px;
-  transition: background 0.25s ease;
+  transition: background 0.25s ease, transform 0.15s ease;
   text-decoration: none;
+  box-shadow: 0 0 12px rgba(212,160,49,0.45);
 }
 
 .cta:hover {
-  background: #e5e5e5;
+  background: #f0c766;
+  transform: translateY(-2px);
 }
