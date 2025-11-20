@@ -1,15 +1,16 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// pages/about.js
+import Layout from "../components/Layout";
 
 export default function About() {
   return (
-    <>
-      <Navbar />
-      <main style={{padding:'50px', maxWidth:'900px', margin:'auto'}}>
-        <h1>About Wolfactory</h1>
-        <p>Wolfactory là studio mobile game hàng đầu tại Việt Nam, chuyên phát triển các game giải trí sáng tạo. Chúng tôi tập trung vào gameplay thú vị, đồ họa đẹp mắt và trải nghiệm người chơi tối ưu.</p>
-      </main>
-      <Footer />
-    </>
+    <Layout title="About">
+      <section className="container" style={{ padding: "60px 20px" }}>
+        <h1 className="section_title">About Wolfactory</h1>
+        <p className="section_desc">
+          Wolfactory là nơi quy tụ những con người đam mê làm game. Chúng tôi xây dựng những sản phẩm có tính tương tác cao,
+          đồ hoạ chỉn chu và gameplay hấp dẫn, dành cho thị trường toàn cầu.
+        </p>
+      </section>
+    </Layout>
   );
 }
