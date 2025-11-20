@@ -5,20 +5,21 @@
   min-height: 75vh;
   display: flex;
   align-items: center;
-  padding: 0 20px;
   color: white;
 
-  /* FIX #1 — Sửa đường dẫn ảnh nền */
-  background-image: 
-    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)), 
-    url('/resources/hero.jpg');
+  /* IMPORTANT FIX — bỏ padding để container canh lề chính xác */
+  padding: 0;
 
+  /* Background */
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)),
+    url('/resources/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* FIX #2 — Thêm fade đen xuống đáy cho cinematic */
+/* Cinematic fade */
 .hero::after {
   content: "";
   position: absolute;
@@ -37,10 +38,12 @@
   position: relative;
   max-width: 600px;
 
-  /* FIX #3 — Căn giữa text theo layout */
+  /* canh giữa giống GamesSection */
   margin: 0 auto;
 
+  /* nhẹ để tránh sát lề mobile */
   padding: 0 20px;
+
   z-index: 2;
   text-align: left;
 }
@@ -62,14 +65,4 @@
 .cta {
   display: inline-block;
   padding: 12px 28px;
-  background: white;
-  color: black;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: background 0.25s ease;
-  text-decoration: none;
-}
-
-.cta:hover {
-  background: #e5e5e5;
-}
+  background:
